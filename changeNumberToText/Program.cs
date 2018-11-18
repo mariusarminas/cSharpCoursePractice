@@ -91,6 +91,7 @@ class Program
       // "simtu", "tukstanciu", "milijonu", "milijardu"; */
 
 
+        //Sukurti funkciją kuri patikrina ar tekstas yra skaičius. Grąžina true jei teisingas.
         int SkaiciusMin = -9;
         int SkaiciusMax = 9;
         int n;
@@ -98,7 +99,7 @@ class Program
         string Skaicius = Console.ReadLine();
         var IsNumber = int.TryParse(Skaicius, out n);
         Console.WriteLine(IsNumber);
-        Console.ReadKey();
+        Console.ReadKey();  
 
 
 
