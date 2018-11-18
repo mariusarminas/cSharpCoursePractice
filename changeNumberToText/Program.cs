@@ -92,17 +92,30 @@ class Program
 
 
         //Sukurti funkciją kuri patikrina ar tekstas yra skaičius. Grąžina true jei teisingas.
-        int SkaiciusMin = -9;
-        int SkaiciusMax = 9;
-        int n;
-        Console.WriteLine("Iveskite skaiciu");
-        string Skaicius = Console.ReadLine();
-        var IsNumber = int.TryParse(Skaicius, out n);
-        Console.WriteLine(IsNumber);
-        Console.ReadKey();  
+       
+            int SkaiciusMin = -9;
+            int SkaiciusMax = 9;
+            int n;
+            Console.WriteLine("Iveskite skaiciu");
+            string Skaicius = Console.ReadLine();
+            var IsNumber = int.TryParse(Skaicius, out n);
+            Atsakymas(n, SkaiciusMin, SkaiciusMax);
+            Console.ReadKey();
+        }
+        static void Atsakymas(int n, int SkaiciusMin, int SkaiciusMax)
+        {
+            if (n > SkaiciusMin && n < SkaiciusMax)
+            {
+                Console.WriteLine("Skaicius patenka i " + SkaiciusMin + " ir " + SkaiciusMax + " rezius");
+            }
+            else
+            {
+                Console.WriteLine("Skaicius nepatenka i " + SkaiciusMin + " ir " + SkaiciusMax + " rezius");
+            }
 
+        }
 
+        //Sukurti funkciją kuri konvertuoti string į int, patikrinti ar skaičius teisinguose rėžiuose: -9 ... 9.
 
 
     }
-}
