@@ -99,7 +99,14 @@ class Program
             Console.WriteLine("Iveskite skaiciu");
             string Skaicius = Console.ReadLine();
             var IsNumber = int.TryParse(Skaicius, out n);
+        if (IsNumber == true)
+        {
             Atsakymas(n, SkaiciusMin, SkaiciusMax);
+        }
+        else
+        {
+            Console.WriteLine("Ivestas simbolis nera skaicius");
+        }
             Console.ReadKey();
         }
         static void Atsakymas(int n, int SkaiciusMin, int SkaiciusMax)
