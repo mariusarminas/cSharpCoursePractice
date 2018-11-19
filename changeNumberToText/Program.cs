@@ -23,7 +23,7 @@ class Program
         {
             Console.WriteLine("Ivestas simbolis nera skaicius");
         }
-        Console.WriteLine(Isvedimas(n));
+        Console.WriteLine("Skaicius zodziais: " + Isvedimas(n));
         Console.ReadKey();
     }
     static void Atsakymas(int n, int SkaiciusMin, int SkaiciusMax)
@@ -56,7 +56,7 @@ class Program
             string tekstas = Pavadinimai[indeksas];
             if (n < 0)
                 tekstas = "minus " + tekstas;
-        Console.WriteLine(Isvedimas(n));
+        
         return tekstas;
         }
 
