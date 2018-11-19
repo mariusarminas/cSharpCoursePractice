@@ -12,7 +12,7 @@ class Program
         Console.WriteLine("Iveskite skaiciu");
         string Skaicius = Console.ReadLine();
         var IsNumber = int.TryParse(Skaicius, out n);
-        //ragas = n;
+        
         Console.WriteLine(IsNumber);
         
         if (IsNumber == true)
@@ -23,7 +23,7 @@ class Program
         {
             Console.WriteLine("Ivestas simbolis nera skaicius");
         }
-        
+        Console.WriteLine(Isvedimas(n));
         Console.ReadKey();
     }
     static void Atsakymas(int n, int SkaiciusMin, int SkaiciusMax)
@@ -49,7 +49,7 @@ class Program
               Console.ReadKey();*/
     }
 
-        string Isvedimas(int n)
+        static string Isvedimas(int n)
         {
             string[] Pavadinimai = new string[]
             {
