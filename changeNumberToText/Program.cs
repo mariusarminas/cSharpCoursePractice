@@ -14,7 +14,7 @@ class Program
         var IsNumber = int.TryParse(Skaicius, out n);
         
         Console.WriteLine(IsNumber);
-        
+
         if (IsNumber == true)
         {
             Atsakymas(n, SkaiciusMin, SkaiciusMax);
@@ -39,14 +39,6 @@ class Program
 
 
 
-        /*    static void Zodziai()
-          {
-
-
-              Console.WriteLine("Iveskite skaiciu");
-              int Skaicius = Convert.ToInt32(Console.ReadLine());
-              Console.WriteLine(Isvedimas(Skaicius));
-              Console.ReadKey();*/
     }
 
         static string Isvedimas(int n)
@@ -69,6 +61,7 @@ class Program
         }
 
     }
+
 
 
 
