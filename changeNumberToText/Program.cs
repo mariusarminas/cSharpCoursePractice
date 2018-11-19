@@ -8,11 +8,13 @@ class Program
         int SkaiciusMin = -9;
         int SkaiciusMax = 9;
         int n;
+        
         Console.WriteLine("Iveskite skaiciu");
         string Skaicius = Console.ReadLine();
         var IsNumber = int.TryParse(Skaicius, out n);
+        //ragas = n;
         Console.WriteLine(IsNumber);
-
+        
         if (IsNumber == true)
         {
             Atsakymas(n, SkaiciusMin, SkaiciusMax);
@@ -21,7 +23,8 @@ class Program
         {
             Console.WriteLine("Ivestas simbolis nera skaicius");
         }
-         Console.ReadKey();
+        Console.WriteLine(Isvedimas(n));
+        Console.ReadKey();
     }
     static void Atsakymas(int n, int SkaiciusMin, int SkaiciusMax)
     {
@@ -33,39 +36,39 @@ class Program
         {
             Console.WriteLine("Skaicius nepatenka i " + SkaiciusMin + " ir " + SkaiciusMax + " rezius");
         }
+
+
+
+        /*    static void Zodziai()
+          {
+
+
+              Console.WriteLine("Iveskite skaiciu");
+              int Skaicius = Convert.ToInt32(Console.ReadLine());
+              Console.WriteLine(Isvedimas(Skaicius));
+              Console.ReadKey();*/
     }
 
-}
-      /*    static void Zodziai()
+        string Isvedimas(int n)
         {
-
-
-            Console.WriteLine("Iveskite skaiciu");
-            int Skaicius = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(Isvedimas(Skaicius));
-            Console.ReadKey();
-
-    
-            string Isvedimas(int skaicius)
+            string[] Pavadinimai = new string[]
             {
-                string[] Pavadinimai = new string[]
-                {
             "nulis", "vienas", "du", "trys", "keturi", "penki", "sesi", "septyni", "astuoni", "devyni",
             "desimt", "vienualika", "dvylika", "trylika", "keturiolika", "penkiolika", "sesiolika", "septyniolika", "astuoniolika", "devyniolika"
-                };
+            };
 
-                int indeksas = skaicius;
-                if (indeksas < 0)
-                    indeksas = indeksas * -1;
+            int indeksas = n;
+            if (indeksas < 0)
+                indeksas = indeksas * -1;
 
-                string tekstas = Pavadinimai[indeksas];
-                if (skaicius < 0)
-                    tekstas = "minus " + tekstas;
+            string tekstas = Pavadinimai[indeksas];
+            if (n < 0)
+                tekstas = "minus " + tekstas;
 
-                return tekstas;
-            }
-
+            return tekstas;
         }
 
-}    */
+    }
+
+
 
